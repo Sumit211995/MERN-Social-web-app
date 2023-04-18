@@ -1,0 +1,98 @@
+.share {
+    width: 100%;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+    box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+  }
+  
+  .postWrapper {
+    padding: 10px;
+    display: block;
+    overflow: auto;
+  }
+  
+  .postTop {
+    display: flex;
+    align-items: center;
+  }
+  
+  .postProfileImg {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+  
+  .postInput {
+    border: none;
+    width: 100%;
+  }
+  
+  .postInput:focus {
+    outline: none;
+  }
+  
+  .postHr {
+    margin: 20px;
+  }
+  
+  .postBottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .postOptions{
+      display: flex;
+      margin-left: 20px;
+  }
+  
+  .postOption{
+      display: flex;
+      align-items: center;
+      margin-right: 15px;
+      cursor: pointer;
+  }
+  
+  .postIcon{
+      font-size: 18px;
+      margin-right: 3px;
+  }
+  
+  .postOptionText{
+      font-size: 14px;
+      font-weight: 500;
+  }
+  
+  .postButton{
+      border: none;
+      padding: 7px;
+      border-radius: 5px;
+      background-color: green;
+      font-weight: 500;
+      margin-right: 20px;
+      cursor: pointer;
+      color: white;
+  }
+
+  .profileUserImg{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 150px;
+    border: 3px solid white;
+}
+
+.shareProfileImg {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
