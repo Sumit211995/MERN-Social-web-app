@@ -9,7 +9,7 @@ export default function Postbar() {
   const [file, setFile] = useState(null);
   const cookies = new Cookies();
   const userData = cookies.get("user_data");
-  const id = userData ? userData._id : '';
+  const id = userData ? userData._id : "";
 
   const submitHandler = async (e) => {
     e.preventDefault();
@@ -41,7 +41,7 @@ export default function Postbar() {
           <img
             className="shareProfileImg"
             src={
-             userData && userData.profilePicture
+              userData && userData.profilePicture
                 ? `http://localhost:8000/images/${userData.profilePicture}`
                 : `http://localhost:8000/images/person/noAvatar.png`
             }

@@ -31,11 +31,11 @@ export default function Profile() {
   }, [username]);
   console.log("id check", user._id, loggedInUserID);
 
-  const handleFollow = async(e)=> {
-    try{
-      const followResponse =  await axios.put(`/users/${user._id}/follow`);
-    }catch{}
-   }
+  const handleFollow = async (e) => {
+    try {
+      const followResponse = await axios.put(`/users/${user._id}/follow`);
+    } catch {}
+  };
 
   return (
     <>

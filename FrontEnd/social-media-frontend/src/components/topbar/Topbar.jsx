@@ -13,7 +13,7 @@ function Topbar() {
   const search = useRef();
   const cookies = new Cookies();
   const userData = cookies.get("user_data");
-  cookies.set('loggedIn_user_id',userData && userData._id);
+  cookies.set("loggedIn_user_id", userData && userData._id);
   const [searchedUser, setsearchedUser] = useState([]);
   const [selected, setSelected] = useState();
   const history = useNavigate();
@@ -30,12 +30,12 @@ function Topbar() {
     }
   };
 
-  const redirectToUser = async (e, index,userValue) => {
+  const redirectToUser = async (e, index, userValue) => {
     e.preventDefault();
     // const data =
-    console.log("e--->", index,userValue);
+    console.log("e--->", index, userValue);
     try {
-      history(`/profile/${userValue && userValue.firstName}`)
+      history(`/profile/${userValue && userValue.firstName}`);
     } catch (err) {}
   };
   return (
@@ -53,10 +53,10 @@ function Topbar() {
             onChange={searchUserHandle}
             list="user_search"
           />
-          {searchedUser.map((userValue,index) => (
+          {searchedUser.map((userValue, index) => (
             <List component="nav" id="user_search">
               <ListItemButton
-              onClick={(event) => redirectToUser(event, index,userValue)}
+                onClick={(event) => redirectToUser(event, index, userValue)}
               >
                 <ListItemText
                   primary={userValue.firstName + " " + userValue.lastName}

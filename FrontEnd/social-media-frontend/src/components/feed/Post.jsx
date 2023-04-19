@@ -15,10 +15,10 @@ function Post({ postDetails, ids }) {
   // const imagePath = "localhost:8000/images/"
 
   useEffect(() => {
-    console.log('userIddd--',postDetails.userId);
+    console.log("userIddd--", postDetails.userId);
     const fetchUser = async () => {
       const res = await axios.get(`/users?id=${postDetails.userId}`);
-      console.log('rsponse data---->',res);
+      console.log("rsponse data---->", res);
       setUser(res.data);
     };
     fetchUser();
@@ -26,9 +26,9 @@ function Post({ postDetails, ids }) {
 
   const likeHandler = () => {
     try {
-        axios.put("/posts/" + postDetails._id + "/like", {
-          userId: postDetails.userId,
-        });
+      axios.put("/posts/" + postDetails._id + "/like", {
+        userId: postDetails.userId,
+      });
     } catch (err) {}
     setLike(isLiked ? like - 1 : like + 1);
     setIsLiked(!isLiked);
